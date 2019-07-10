@@ -143,7 +143,7 @@ h1 {
   
     <center>
     <h1>hola bienvenidos a pepelis!!</h1>
-    <form action="<?php echo site_url();?>/welc2" method="post">
+    <form action="<?php echo site_url();?>/Welc2" method="post">
         <input type="submit" value="entrar" name="registrarse" placeholder="registrarse">
     </form>
     </center>

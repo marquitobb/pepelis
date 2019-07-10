@@ -143,7 +143,7 @@ $_SESSION['usuario']=$idus[0]->nombre;
 <h1 class="mas">Bienvenido a la renta de peliculas</h1>
 <label>Usuario: <strong class="maso"><?php echo $_POST['usuario']?></strong></label>
 
-<a href=""<?php echo site_url();?>/inicio" class="button">Link Button</a>
+<a href=""<?php echo site_url();?>/Inicio" class="button">Link Button</a>
 
 <?php foreach ($peliculas as $i => $peli): ?>
 		<!--<p><?=$peli->idpeliculas;?></p>-->

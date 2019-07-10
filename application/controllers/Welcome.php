@@ -6,11 +6,11 @@ class Welcome extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		//Cargamos el modelo a usar
-		//$this ->load-> model('modelo_uno');
+		//$this ->load-> model('Modelo_uno');
 	}
 
 	public function index()
 	{
-		$this->load->view('hola');
+		$this->load->view('Hola');
 	}
 }

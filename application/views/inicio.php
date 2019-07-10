@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="https://newsweekespanol.com/wp-content/uploads/2018/01/Netflix-Logo-png.jpg">
-	<title>inicio de secion</title>
+	<title>Inicio de secion</title>
   <style>
         body{
     /*margin: 0;
@@ -87,14 +87,14 @@
 <body>
 
 <div class="box">
-    <form  action="<?php echo site_url();?>/usu_controll" method="post">
+    <form  action="<?php echo site_url();?>/Usu_controll" method="post">
             <h1>INICIAR SESION</h1>
             <input type="text" name="usuario" placeholder="username">
             <input type="password" name="pass" placeholder="password">
             <input type="submit" value="Ingresar" name="datosUsuario" placeholder="entrar">
     </form>
         
-    <form  action="<?php echo site_url();?>/con_regis" method="post">
+    <form  action="<?php echo site_url();?>/Con_regis" method="post">
         <input style="border: 2px solid #F80358;" type="submit" value="registrarte" name="registrarse" placeholder="registrarse">
     </form>        
     

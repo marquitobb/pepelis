@@ -3,7 +3,7 @@
   exit('No direct script acces allowed');
 
 }
-class modelo_uno extends CI_MODEL{
+class Modelo_uno extends CI_MODEL{
 
 	public function verifica($usuario,$pass){
 		$this->db->where('nombre',$usuario);

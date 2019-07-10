@@ -1,13 +1,13 @@
 <?php 
 	defined('BASEPATH') OR exit('No direct script access allowed');
-	class usu_controll extends CI_Controller{
+	class Usu_controll extends CI_Controller{
 		public function __construct(){
 			parent::__construct();
 			//Cargamos el modelo a usar
-			$this ->load-> model('modelo_uno');
+			$this ->load-> model('Modelo_uno');
         }
 		public function iniciar_sesion(){
-			$this->load->view('inicio', 'refresh');
+			$this->load->view('Inicio', 'refresh');
 		}
 		
 
@@ -19,13 +19,13 @@
 				$data['usuario']=$usuario;
 				$data['pass']=$pass;
 				
-				$query = $this->modelo_uno->verifica($usuario,$pass);
+				$query = $this->Modelo_uno->verifica($usuario,$pass);
 				if($query){
-					$data['peliculas'] = $this->modelo_uno->peliculas();
+					$data['peliculas'] = $this->Modelo_uno->peliculas();
 					$this->load->view('2view',$data);
 				}else{
-					//redirect('views/inicio');
-					//$this->load->view('inicio', 'refresh');
+					//redirect('views/Inicio');
+					//$this->load->view('Inicio', 'refresh');
 					$this->iniciar_sesion();
 					echo "<script>alert('compa ese no es un usuario');</script>";
 				}
@@ -53,30 +53,30 @@
 				/*
 				if($con == null) {
 					echo "<script>alert('ingresa la contraseña');</script>";
-					$this->load->view('registro');
+					$this->load->view('Registro');
 				}
 				elseif ($correo == null) {
 					echo "<script>alert('ingresa el correo');</script>";
-					$this->load->view('registro');
+					$this->load->view('Registro');
 				}				
 				elseif ($usu == null) {
 					echo "<script>alert('ingresa el usuario');</script>";
-					$this->load->view('registro');
+					$this->load->view('Registro');
 				} elseif(($con != null) && ($correo != null) && ($usu != null)){
-					$this->modelo_uno->usunew($usu,$con,$correo);
+					$this->Modelo_uno->usunew($usu,$con,$correo);
 					//$this->load->view('newusuario',$data);
 					echo "<script>alert('Usuario Registrado, ¡Gracias!.');</script>";
-					$this->load->view('inicio', 'refresh');	
+					$this->load->view('Inicio', 'refresh');	
 					
 				}*/
 				if ($con == null || $correo == null || $usu == null) {
 					echo "<script>alert('registrate bien');</script>";
-					$this->load->view('registro');
+					$this->load->view('Registro');
 				}else {
-					$this->modelo_uno->usunew($usu,sha1($con),$correo);
+					$this->Modelo_uno->usunew($usu,sha1($con),$correo);
 					//$this->load->view('newusuario',$data);
 					echo "<script>alert('Usuario Registrado, ¡Gracias!.');</script>";
-					$this->load->view('inicio', 'refresh');	
+					$this->load->view('Inicio', 'refresh');	
 				}
 
 
