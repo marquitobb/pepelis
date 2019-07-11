@@ -14,6 +14,7 @@ class Modelo_uno extends CI_MODEL{
 public function peliculas(){
 	return $this->db->Select()
 			 ->from('peliculas')
+			 ->order_by(1, "desc")
 			 ->get('')
 			 ->result();
 }

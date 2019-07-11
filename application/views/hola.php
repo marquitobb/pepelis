@@ -6,6 +6,10 @@
 	<meta charset="utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="https://newsweekespanol.com/wp-content/uploads/2018/01/Netflix-Logo-png.jpg">
 	<title>bienvenidos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <style>
         @import url(https://fonts.googleapis.com/css?family=Erica+One);
 /* BODY 
@@ -31,7 +35,7 @@ https://blog.aulaformativa.com/ejemplos-efectos-de-texto-css-codepen/  <---link 
 }
 
 .circle:nth-child(1){
-    background: url(https://blog.ticketmaster.es/wp-content/uploads/2018/11/aquaman-estreno.jpeg);
+    background: url(https://cine3-media.s3-accelerate.amazonaws.com/2019/02/5c3f6242e8b8c.jpg);
     background-attachment: fixed;
     clip-path: circle(100px at 0 0);
 }
@@ -56,7 +60,7 @@ https://blog.aulaformativa.com/ejemplos-efectos-de-texto-css-codepen/  <---link 
     clip-path: circle(1200px at 0 100%);
 }
 .circle:nth-child(4){
-    background: url(https://fimgs.net/himg/o.72388.jpg);
+    background: url(https://www.universomarvel.com/wp-content/uploads/2018/07/captain-marvel-logo-2.jpg);
     background-attachment: fixed;
     clip-path: circle(100px at 100% 100%);
 }
@@ -144,7 +148,7 @@ h1 {
     <center>
     <h1>hola bienvenidos a pepelis!!</h1>
     <form action="<?php echo site_url();?>/Welc2" method="post">
-        <input type="submit" value="entrar" name="registrarse" placeholder="registrarse">
+        <input type="submit" class="btn btn-info" value="entrar" name="registrarse" placeholder="registrarse">
     </form>
     </center>
     
