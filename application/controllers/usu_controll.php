@@ -42,6 +42,9 @@
 	}
 
 	public function nuevoUsuario(){
+
+		
+
 		if(isset($_POST['newusuario'])){
 				$usu=$_POST['usu'];
 				$con=$_POST['con'];
@@ -50,38 +53,26 @@
 				$data['con']=$con;
 				$data['correo']=$correo;
 
-				/*
-				if($con == null) {
-					echo "<script>alert('ingresa la contraseña');</script>";
-					$this->load->view('Registro');
-				}
-				elseif ($correo == null) {
-					echo "<script>alert('ingresa el correo');</script>";
-					$this->load->view('Registro');
-				}				
-				elseif ($usu == null) {
-					echo "<script>alert('ingresa el usuario');</script>";
-					$this->load->view('Registro');
-				} elseif(($con != null) && ($correo != null) && ($usu != null)){
-					$this->Modelo_uno->usunew($usu,$con,$correo);
-					//$this->load->view('newusuario',$data);
-					echo "<script>alert('Usuario Registrado, ¡Gracias!.');</script>";
-					$this->load->view('Inicio', 'refresh');	
-					
-				}*/
-				if ($con == null || $correo == null || $usu == null) {
-					echo "<script>alert('registrate bien');</script>";
-					$this->load->view('Registro');
-				}else {
-					$this->Modelo_uno->usunew($usu,sha1($con),$correo);
-					//$this->load->view('newusuario',$data);
-					echo "<script>alert('Usuario Registrado, ¡Gracias!.');</script>";
-					$this->load->view('Inicio', 'refresh');	
-				}
+				$query = $this->db->get_where('usuario', array('nombre' => $usu));
 
+				if ($query->num_rows() > 0) {
+					echo'<script>alert("Ingresa otro nombre de usuario ese ya fue registrado")</script>';
+					$this->load->view('Registro', 'refresh');	
+				}else{
 
+					if ($con == null || $correo == null || $usu == null) {
+						echo "<script>alert('registrate bien');</script>";
+						$this->load->view('Registro');
+					}else{
+						$this->Modelo_uno->usunew($usu,sha1($con),$correo);
+						//$this->load->view('newusuario',$data);
+						echo "<script>alert('Usuario Registrado, ¡Gracias!.');</script>";
+						$this->load->view('Inicio', 'refresh');	
+					}
+				}
 				
 		}
+	
 	}
 	
 

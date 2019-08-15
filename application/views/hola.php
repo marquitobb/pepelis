@@ -135,6 +135,21 @@ h1 {
   }
 }
 
+.bbcita {
+  padding: 30px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 12px 2px;
+  cursor: pointer;
+}
+.amor{
+    position: relative;
+            left: 0%;
+            position: relative;
+            top: 400px;
+}
 
     </style>
 
@@ -148,7 +163,8 @@ h1 {
     <center>
     <h1>hola bienvenidos a pepelis!!</h1>
     <form action="<?php echo site_url();?>/Welc2" method="post">
-        <input type="submit" class="btn btn-info" value="entrar" name="registrarse" placeholder="registrarse">
+        
+        <input type="submit" class="btn btn-info col-md-2 btn-lg bbcita amor" value="entrar" name="registrarse" placeholder="registrarse">
     </form>
     </center>
     

@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '127.0.0.1',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'pepelis',
+	'hostname' => 'beyveoqm0kd6z0bqq3xi-mysql.services.clever-cloud.com',//'127.0.0.1',
+	'username' => 'uduk5isvbrpkvjtm',//'root',
+	'password' => 'kmIIhcRds8lVrTnahH2u',//'',
+	'database' => 'beyveoqm0kd6z0bqq3xi',//'pepelis',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
