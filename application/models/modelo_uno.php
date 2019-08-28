@@ -24,6 +24,13 @@ public function usunew($Pelicula,$Nombre,$current_date){
 					->set('correo',$current_date)
 					->insert('usuario');
 }
+public function busca($pel){
+	return $this->db->Select()
+			 ->from('peliculas',$pel)
+			 ->where('peliculas',)
+			 ->get('')
+			 ->result();
+}
 /*
 public function nickname(){
 	return $this->db->Select('nombre')
