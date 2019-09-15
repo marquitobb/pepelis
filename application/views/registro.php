@@ -11,7 +11,10 @@
     /*margin: 0;
     padding: 0;*/
     font-family: sans-serif;
+    background-image: url('https://image.freepik.com/vector-gratis/taquilla-cine-que-vende-entradas-peliculas-planas_82574-9343.jpg');
+    /*
     background: linear-gradient(to right,#0f4caf, #000000);
+    */
 }
 .box{
     width: 300px;
@@ -20,7 +23,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: #191919;
+    background: #2E4053;
+    /*background: #191919;*/
     text-align: center;
 }
 .box h1{

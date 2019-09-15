@@ -8,10 +8,19 @@
 	<title>Inicio de secion</title>
   <style>
         body{
-    /*margin: 0;
-    padding: 0;*/
+    margin: 0;
+    padding: 0;
     font-family: sans-serif;
-    background: linear-gradient(to right,#0f4caf, #000000);
+    background-image: url('https://www.findelahistoria.com/web/wp-content/uploads/2016/05/fondos-de-pantalla-de-cine-para-movil.jpg');
+    /*
+    background: linear-gradient(to right,#0f4caf, #000000);*/
+    /*
+    background: url(https://img-cdn.hipertextual.com/files/2017/03/Captura-de-pantalla-2017-03-30-a-las-11.59.05.png?strip=all&lossy=1&quality=57&resize=740%2C490&ssl=1) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    */
 }
 .box{
     width: 300px;
@@ -62,7 +71,7 @@
     cursor: pointer;
 }
 .box input[type = "submit"]:hover{
-    background: #03C4F8;
+    background-color: #26eb03;
 }
 
 .je input[type = "submit"]{
@@ -72,12 +81,15 @@
     margin: 20px auto;
     text-align: center;
     border: 2px solid #26eb03;
-    padding: 4px 40px;
+    padding: 14px 40px;
     outline: none;
     color: white;
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
+}
+.je input[type = "submit"]:hover{
+    background-color: #FF33DA;
 }
 
 
@@ -93,10 +105,11 @@
             <input type="password" name="pass" placeholder="password">
             <input type="submit" value="Ingresar" name="datosUsuario" placeholder="entrar">
     </form>
-        
+<div class="je">
     <form  action="<?php echo site_url();?>/Con_regis" method="post">
         <input style="border: 2px solid #F80358;" type="submit" value="registrarte" name="registrarse" placeholder="registrarse">
     </form>        
+</div>   
     
 </div>
 </body>

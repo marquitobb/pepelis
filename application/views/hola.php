@@ -35,7 +35,7 @@ https://blog.aulaformativa.com/ejemplos-efectos-de-texto-css-codepen/  <---link 
 }
 
 .circle:nth-child(1){
-    background: url(https://cine3-media.s3-accelerate.amazonaws.com/2019/02/5c3f6242e8b8c.jpg);
+    background: url(https://lumiere-a.akamaihd.net/v1/images/eu_aladdin-movie_hero-v2_r_29ab6c1a.jpeg?region=0,0,2000,835&width=1200);
     background-attachment: fixed;
     clip-path: circle(100px at 0 0);
 }
@@ -43,7 +43,7 @@ https://blog.aulaformativa.com/ejemplos-efectos-de-texto-css-codepen/  <---link 
     clip-path: circle(1200px at 0 0);
 }
 .circle:nth-child(2){
-    background: url(https://cineoculto.com/wp-content/uploads/2019/01/Glass-40.jpg);
+    background: url(https://i2.wp.com/codigoespagueti.com/wp-content/uploads/2019/06/phoenix.jpeg?resize=1080%2C514&quality=80&ssl=1);
     /*background-repeat: no-repeat;*/
     background-attachment: fixed;
     clip-path: circle(100px at 100% 0);
@@ -52,7 +52,7 @@ https://blog.aulaformativa.com/ejemplos-efectos-de-texto-css-codepen/  <---link 
     clip-path: circle(1200px at 100% 0);
 }
 .circle:nth-child(3){
-    background: url(https://www.playcamcine.com/wp-content/uploads/2018/12/MortalEngines.jpg);
+    background: url(https://www.hoy.com.py/imagenes/VOiRHvQjFxzS-fpIIK5lYgbZufbBgpMoUX4L7FZEW0Y/claves-de-avengers-endgame.jpg);
     background-attachment: fixed;
     clip-path: circle(100px at 0 100%);
 }
@@ -60,7 +60,7 @@ https://blog.aulaformativa.com/ejemplos-efectos-de-texto-css-codepen/  <---link 
     clip-path: circle(1200px at 0 100%);
 }
 .circle:nth-child(4){
-    background: url(https://www.universomarvel.com/wp-content/uploads/2018/07/captain-marvel-logo-2.jpg);
+    background: url(https://files.lafm.com.co/assets/public/styles/image_631x369/public/2018-11/hellboy_1_0.jpg?itok=oIbKjvLn);
     background-attachment: fixed;
     clip-path: circle(100px at 100% 100%);
 }
@@ -78,7 +78,8 @@ body {
   bottom: 0;
   width: 100%;  
   height: 100%;
-  background-color: pink;
+  /*background-color: pink;*/
+  background-image: url('https://blog.powerplanetonline.com/wp-content/uploads/2015/01/7d1f157af0455adcbe539ae235e47e12.jpg');
  
   background-attachment: fixed;
   background-size: 100% 100%;
