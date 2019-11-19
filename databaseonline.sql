@@ -1,4 +1,10 @@
 
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
 
 CREATE TABLE `peliculas` (
   `idpeliculas` int(11) NOT NULL,
@@ -9,9 +15,6 @@ CREATE TABLE `peliculas` (
   `link` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `peliculas`
---
 
 INSERT INTO `peliculas` (`idpeliculas`, `nombre`, `tipo`, `imagen`, `trailer`, `link`) VALUES
 (1, 'glass', 'accion', 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/glass-poster-1543569732.jpg?crop=1xw:1xh;center,top&resize=480:*', 'https://www.youtube.com/embed/cKQaJeHOXuA', 'https://mega.nz/#!OUMlSa5a!xC_IA--6sHlSZLQJxjEVA4A1l3ij8Huk87FQ1D-ZlLM'),
@@ -26,13 +29,15 @@ INSERT INTO `peliculas` (`idpeliculas`, `nombre`, `tipo`, `imagen`, `trailer`, `
 (10, 'Cementerio Maldito', 'terror', 'https://pics.filmaffinity.com/pet_sematary-289818809-large.jpg', 'https://www.youtube.com/embed/8PQ5kdXuVUs', 'https://mega.nz/#F!3pUFzAKR!37olufItd4D3voPBUbn3tQ'),
 (11, 'Avengers EndGame', 'accion', 'https://is3-ssl.mzstatic.com/image/thumb/Video113/v4/6e/47/f6/6e47f680-ac54-21ff-a37a-3aab1a9970b0/DIS_AV_ENDGAME_FINAL_ENGLISH_US_WW_WW_ARTWORK_EN_2000x3000_1OWPBJ00000GQ6.lsr/268x0w.jpg', 'https://www.youtube.com/embed/9hpWz0ZMFAo', 'https://mega.nz/#F!O4sBHYRY!-2s3U34FovfmUSLxGQG46g'),
 (12, 'plan de escape 3', 'acción', 'https://repelisgo.com/_images/posters/YCckTBb9o3N2LETmZMZseHv/280x420.jpg', 'https://www.youtube.com/embed/eBrPYlleNmk', 'https://mega.nz/#F!H0sXhaqK!a7e8aebYBkxLxYJhhRzZ1Q'),
-(13, 'La razon de estar contigo 2', 'familiar', 'http://bajalogratis.com/wp-content/uploads/2019/08/La_raz_n_de_estar.jpg', 'https://www.youtube.com/embed/7mljHYAgE1M', 'https://mega.nz/#F!asNmGQDT!UEexaOZ7wDPbYbMvsj5RaA');
+(13, 'La razon de estar contigo 2', 'familiar', 'http://bajalogratis.com/wp-content/uploads/2019/08/La_raz_n_de_estar.jpg', 'https://www.youtube.com/embed/7mljHYAgE1M', 'https://mega.nz/#F!asNmGQDT!UEexaOZ7wDPbYbMvsj5RaA'),
+(14, 'la vida secreta de tus mascotas 2', 'familiar', 'https://cineplanechitstatic.azureedge.net/CDN/media/entity/get/FilmPosterGraphic/HO00000452?referenceScheme=HeadOffice&allowPlaceHolder=true', 'https://www.youtube.com/embed/mRbjAXjOcKg', 'https://mega.nz/#F!mtUymALR!nG9C4VziXg-aegfp3dW_3A'),
+(15, 'john wick 3 pelicula', 'accion', 'https://www-cinemascomics-com.exactdn.com/wp-content/uploads/2018/04/john-wick-3.jpg?strip=all&lossy=1&ssl=1', 'https://www.youtube.com/embed/9CHmEHBKuyE', 'https://mega.nz/#F!CgEyQYpZ!Nc61usNdWwlqTZ4BvuU6-g'),
+(16, 'Aladdin', 'familiar', 'https://www.dodmagazine.es/wp-content/uploads/2019/05/aladdin-2019-banda-sonora.jpg', 'https://www.youtube.com/embed/foyufD52aog', 'https://mega.nz/#F!TlMxRQwR!SUaSBTqnAVznwrl4e1iaxA'),
+(17, 'xmen dark fenix', 'acción', 'https://repelisgo.com/_images/posters/ZhFysqgjPj5KUCjcbYpeasH/280x420.jpg', 'https://www.youtube.com/embed/Nly3-14vLh0', 'https://mega.nz/#F!T89BnYQR!q_Uc5CPjX165KhAfYFnHyg'),
+(18, 'Los muertos no mueren', 'terror', 'https://pics.filmaffinity.com/Los_muertos_no_mueren-429140432-large.jpg', 'https://www.youtube.com/embed/5ZCVhFmbAY0', 'https://mega.nz/#F!Xt1nEI5J!kbaVWMUKM8XUnkc40X1Njg'),
+(19, 'Anabell 3', 'terror', 'https://static.pelisplus.co/movie/cover/original/72c5cf022700110838c6a9238f7698eb.jpg', 'https://www.youtube.com/embed/KUnKWjeQA9A', 'https://mega.nz/#F!a5sHzahR!05U44GTOP-xqapDnHNntzg'),
+(20, 'Spider-man lejos de casa', 'accion', 'https://pics.filmaffinity.com/Spider_Man_Lejos_de_casa-339542528-large.jpg', 'https://www.youtube.com/embed/m4DVLBdHiG0', 'https://mega.nz/#F!i40FxACK!39UqBG6d_MNKQaWDg1w2sg');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `rentas`
---
 
 CREATE TABLE `rentas` (
   `idrentas` int(11) NOT NULL,
@@ -41,11 +46,6 @@ CREATE TABLE `rentas` (
   `fecha_renta` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `usuario`
---
 
 CREATE TABLE `usuario` (
   `idusuario` int(11) NOT NULL,
@@ -54,62 +54,33 @@ CREATE TABLE `usuario` (
   `correo` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `usuario`
---
 
 INSERT INTO `usuario` (`idusuario`, `nombre`, `contra`, `correo`) VALUES
 (1, 'marco', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'maca9608@gmail.com'),
 (17, 'uli', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'uli@gmail.com'),
 (19, 'Fernanda', '0a056d284190cb6ab5d19888f2d683afebfc6519', 'fdrgares@gmail.com'),
 (20, 'jose', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'josejiji@gmail.com'),
-(23, 'beto', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'beto@gmail.com');
+(23, 'beto', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'beto@gmail.com'),
+(24, 'Gabriel', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'angelmolinagranados@gmail.com');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `peliculas`
---
 ALTER TABLE `peliculas`
   ADD PRIMARY KEY (`idpeliculas`);
 
---
--- Indexes for table `rentas`
---
 ALTER TABLE `rentas`
   ADD PRIMARY KEY (`idrentas`);
 
---
--- Indexes for table `usuario`
---
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`idusuario`),
   ADD UNIQUE KEY `nombre` (`nombre`),
   ADD UNIQUE KEY `nombre_2` (`nombre`);
 
---
--- AUTO_INCREMENT for dumped tables
---
 
---
--- AUTO_INCREMENT for table `peliculas`
---
 ALTER TABLE `peliculas`
-  MODIFY `idpeliculas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `idpeliculas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
---
--- AUTO_INCREMENT for table `rentas`
---
 ALTER TABLE `rentas`
   MODIFY `idrentas` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `usuario`
---
 ALTER TABLE `usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
-
--- insert de mas
